@@ -29,13 +29,15 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
 /**
- * 
+ *
  * deserialization of a JSON string to a Java Object
- * 
+ *
  * @author Martin Grassl - initial contribution
  */
 @NonNullByDefault
-public interface JsonStringDeserializer {
+public class JsonStringDeserializer {
+    private JsonStringDeserializer() {
+    }
 
     static final Logger LOGGER = LoggerFactory.getLogger(JsonStringDeserializer.class);
 
