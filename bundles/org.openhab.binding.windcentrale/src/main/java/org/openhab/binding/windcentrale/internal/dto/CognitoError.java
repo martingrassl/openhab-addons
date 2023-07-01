@@ -10,30 +10,23 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  */
-package org.openhab.binding.windcentrale.internal.config;
+package org.openhab.binding.windcentrale.internal.dto;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
- * The configuration of a Mill thing.
+ * An error response of the Cognito API.
  *
- * @author Wouter Born - Initial contribution, add Mill configuration object
+ * @author Wouter Born - Initial contribution
  */
 @NonNullByDefault
-public class MillConfig {
+public class CognitoError {
 
-    /**
-     * Windmill identifier
-     */
-    public int millId = 1;
+    @SerializedName("__type")
+    public String type = "";
 
-    /**
-     * Refresh interval for refreshing the data in seconds
-     */
-    public int refreshInterval = 30;
-
-    /**
-     * Number of wind shares ("Winddelen")
-     */
-    public int wd = 1;
+    @SerializedName("message")
+    public String message = "";
 }
